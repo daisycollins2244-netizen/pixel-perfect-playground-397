@@ -6,13 +6,13 @@ import cover from "@/assets/cover.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "No Escape Here — Aubrey Renee | The Varnash-Kalta Saga" },
+      { title: "No Escape Here — Isabella Renee McKean | The Varnash-Kalta Saga" },
       {
         name: "description",
         content:
-          "A storm leads Ryla to a forgotten movie theater and a hidden world. No Escape Here by Aubrey Renee — coming soon.",
+          "A storm leads Ryla to a forgotten movie theater and a hidden world. No Escape Here by Isabella Renee McKean — coming soon.",
       },
-      { property: "og:title", content: "No Escape Here — Aubrey Renee" },
+      { property: "og:title", content: "No Escape Here — Isabella Renee McKean" },
       {
         property: "og:description",
         content: "Dark secrets. Forbidden love. Supernatural power. Revenge. Coming soon.",
@@ -68,7 +68,7 @@ function Index() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/60 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="#home" className="font-display text-lg tracking-[0.3em] text-foreground">
-            AUBREY <span className="text-primary">RENEE</span>
+            ISABELLA <span className="text-primary">RENEE MCKEAN</span>
           </a>
           <nav className="hidden gap-8 lg:flex" aria-label="Main">
             {nav.map(([l, h]) => (
@@ -117,7 +117,7 @@ function Index() {
             No <span className="flicker text-blood glow-blood">Escape</span> Here
           </h1>
           <p className="mt-4 font-display text-lg tracking-[0.5em] text-silver md:text-2xl">
-            AUBREY RENEE
+            ISABELLA RENEE MCKEAN
           </p>
           <p className="mt-6 max-w-xl font-serif text-2xl text-foreground/90 italic">
             Her past found her. Now it is time for her to find herself.
@@ -136,7 +136,7 @@ function Index() {
             <div className="aspect-[2/3] w-full">
               <img
                 src={cover.url}
-                alt="No Escape Here book cover by Aubrey Renee"
+                alt="No Escape Here book cover by Isabella Renee McKean"
                 loading="lazy"
                 className="h-full w-full object-cover object-right"
               />
@@ -146,7 +146,7 @@ function Index() {
             <Eyebrow>The Book</Eyebrow>
             <h2 className="font-display text-4xl md:text-5xl">No Escape Here</h2>
             <p className="mt-2 text-sm tracking-[0.3em] text-muted-foreground uppercase">
-              Aubrey Renee · Book One
+              Isabella Renee McKean · Book One
             </p>
             <p className="mt-8 font-serif text-2xl text-primary italic">
               A storm. A forgotten theater. A secret she was never meant to remember.
@@ -189,10 +189,10 @@ function Index() {
           </div>
           <div>
             <Eyebrow>About the Author</Eyebrow>
-            <h2 className="font-display text-4xl md:text-5xl">Aubrey Renee</h2>
+            <h2 className="font-display text-4xl md:text-5xl">Isabella Renee McKean</h2>
             <Divider />
             <p className="leading-relaxed text-silver">
-              [Placeholder] Aubrey's biography, writing background, and personal inspiration will
+              [Placeholder] Isabella's biography, writing background, and personal inspiration will
               appear here. Share the story behind the storm, the theater, and the Varnash-Kalta
               Saga.
             </p>
@@ -267,15 +267,15 @@ function Index() {
       <footer id="contact" className="border-t border-border py-20">
         <div className="mx-auto max-w-6xl px-6 text-center">
           <Eyebrow>Contact</Eyebrow>
-          <p className="font-display text-2xl tracking-[0.3em]">AUBREY RENEE</p>
-          <p className="mt-4 text-sm text-muted-foreground">[Placeholder] contact@aubreyrenee.com</p>
+          <p className="font-display text-2xl tracking-[0.3em]">ISABELLA RENEE MCKEAN</p>
+          <p className="mt-4 text-sm text-muted-foreground">[Placeholder] contact@isabellarenemckean.com</p>
           <div className="mt-6 flex justify-center gap-8 text-xs tracking-[0.25em] text-silver uppercase">
             {["Instagram", "TikTok", "Facebook", "Goodreads"].map((s) => (
               <a key={s} href="#contact" className="hover:text-primary">{s}</a>
             ))}
           </div>
           <p className="mt-12 text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Aubrey Renee. All rights reserved.
+            © {new Date().getFullYear()} Isabella Renee McKean. All rights reserved.
           </p>
         </div>
       </footer>
