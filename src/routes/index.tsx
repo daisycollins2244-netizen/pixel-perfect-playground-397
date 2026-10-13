@@ -29,6 +29,8 @@ const nav = [
   ["The Book", "#book"],
   ["About the Author", "#author"],
   ["Trailer", "#trailer"],
+  ["The Song", "#song"],
+  ["Giveaways", "#premiere"],
   ["News & Events", "#news"],
   ["Contact", "#contact"],
 ] as const;
@@ -219,6 +221,81 @@ function Index() {
               </span>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Soundtrack */}
+      <section id="song" className="relative overflow-hidden bg-charcoal py-28">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-6 bg-[repeating-linear-gradient(90deg,var(--border)_0_18px,transparent_18px_34px)] opacity-60" aria-hidden />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-6 bg-[repeating-linear-gradient(90deg,var(--border)_0_18px,transparent_18px_34px)] opacity-60" aria-hidden />
+        <div className="mx-auto grid max-w-6xl items-center gap-16 px-6 md:grid-cols-2">
+          <div className="relative mx-auto aspect-square w-full max-w-sm">
+            <div className="absolute inset-0 rounded-full bg-[repeating-radial-gradient(circle,var(--background)_0_2px,var(--card)_2px_4px)] shadow-[0_0_90px_-10px_var(--amber)] animate-[spin_9s_linear_infinite]">
+              <img src={cover.url} alt="" className="absolute inset-[32%] h-[36%] w-[36%] rounded-full object-cover" />
+              <span className="absolute inset-[48%] rounded-full bg-background" />
+            </div>
+          </div>
+          <div>
+            <Eyebrow>Original Soundtrack</Eyebrow>
+            <h2 className="font-display text-4xl md:text-5xl">The Song of No Escape Here</h2>
+            <p className="mt-6 text-muted-foreground">
+              Every story has a score. Isabella wrote an original song inspired by Ryla's journey —
+              the storm, the theatre, and the world that won't let her go. Press play and let the
+              credits roll.
+            </p>
+            <div className="mt-8 rounded-sm border border-border bg-card p-5">
+              <div className="flex items-center gap-4">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">▶</span>
+                <div className="flex-1">
+                  <p className="font-display text-sm tracking-[0.2em] uppercase">Song Title Coming Soon</p>
+                  <p className="text-xs text-muted-foreground">Isabella Renee McKean</p>
+                  <div className="mt-3 flex h-6 items-end gap-[3px]" aria-hidden>
+                    {Array.from({ length: 40 }).map((_, i) => (
+                      <span key={i} className="flex-1 rounded-sm bg-primary/60" style={{ height: `${25 + ((i * 37) % 75)}%` }} />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Promotions */}
+      <section id="premiere" className="relative overflow-hidden py-28">
+        <img src={hero} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-15" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+        <div className="relative mx-auto max-w-6xl px-6">
+          <div className="text-center">
+            <div className="mx-auto inline-block border-2 border-primary px-8 py-4 shadow-[0_0_40px_-10px_var(--amber)]">
+              <p className="font-display text-xs tracking-[0.5em] text-primary uppercase">Tonight · Premiere Night</p>
+              <h2 className="mt-2 font-display text-4xl md:text-5xl">Swag & Giveaways</h2>
+            </div>
+            <p className="mx-auto mt-6 max-w-2xl text-muted-foreground">
+              Catch Isabella at Twilight saga fan events, where she'll be previewing No Escape Here
+              before release. Grab a ticket stub, claim your keepsake, and enter to win.
+            </p>
+          </div>
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {[
+              ["Admit One", "Bookmarks", "Collectible bookmarks with art from the New Moon Escape Theatre — free at every event."],
+              ["Admit One", "Signed Certificates", "Limited, numbered certificates signed by Isabella for early readers and fans."],
+              ["Grand Prize", "Gift Basket", "A themed gift basket full of book goodies — enter at the event table to win."],
+            ].map(([tag, t, d]) => (
+              <div key={t} className="relative flex rounded-sm border border-dashed border-primary/50 bg-card transition-transform hover:-translate-y-1">
+                <div className="flex w-12 shrink-0 items-center justify-center border-r border-dashed border-primary/50">
+                  <span className="rotate-[-90deg] whitespace-nowrap font-display text-[10px] tracking-[0.3em] text-primary uppercase">{tag}</span>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display text-xl tracking-wide">{t}</h3>
+                  <p className="mt-3 text-sm text-muted-foreground">{d}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="mt-10 text-center font-display text-xs tracking-[0.3em] text-muted-foreground uppercase">
+            Event dates announced soon — see News & Events below
+          </p>
         </div>
       </section>
 
