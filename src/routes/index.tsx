@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import hero from "@/assets/hero.jpg";
-import cover from "@/assets/cover.png.asset.json";
+import coverFront from "@/assets/cover-front.png.asset.json";
 import authorPhoto from "@/assets/Bella101926.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -136,14 +136,14 @@ function Index() {
       <section id="book" className="bg-charcoal py-28">
         <div className="mx-auto grid max-w-6xl items-center gap-16 px-6 md:grid-cols-[2fr_3fr]">
           <div className="mx-auto w-full max-w-sm overflow-hidden rounded-sm shadow-[0_30px_80px_-20px_var(--blood)]">
-            <div className="aspect-[2/3] w-full">
-              <img
-                src={cover.url}
-                alt="No Escape Here book cover by Aubrey Renee"
-                loading="lazy"
-                className="h-full w-full object-cover object-right"
-              />
-            </div>
+            <img
+              src={coverFront.url}
+              alt="No Escape Here book cover by Aubrey Renee"
+              loading="lazy"
+              width={766}
+              height={941}
+              className="block h-auto w-full"
+            />
           </div>
           <div>
             <Eyebrow>The Book</Eyebrow>
@@ -241,7 +241,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-16 px-6 md:grid-cols-2">
           <div className="relative mx-auto aspect-square w-full max-w-sm">
             <div className="absolute inset-0 rounded-full bg-[repeating-radial-gradient(circle,var(--background)_0_2px,var(--card)_2px_4px)] shadow-[0_0_90px_-10px_var(--amber)] animate-[spin_9s_linear_infinite]">
-              <img src={cover.url} alt="" className="absolute inset-[32%] h-[36%] w-[36%] rounded-full object-cover" />
+              <img src={coverFront.url} alt="" className="absolute inset-[32%] h-[36%] w-[36%] rounded-full object-cover" />
               <span className="absolute inset-[48%] rounded-full bg-background" />
             </div>
           </div>
