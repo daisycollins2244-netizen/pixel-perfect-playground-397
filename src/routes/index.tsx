@@ -193,11 +193,17 @@ function Index() {
             <Eyebrow>About the Author</Eyebrow>
             <h2 className="font-display text-4xl md:text-5xl">Isabella Renee McKean</h2>
             <Divider />
-            <p className="leading-relaxed text-silver">
-              [Placeholder] Isabella's biography, writing background, and personal inspiration will
-              appear here. Share the story behind the storm, the theater, and the Varnash-Kalta
-              Saga.
-            </p>
+            <div className="space-y-4 leading-relaxed text-silver">
+              <p>53 year old Trans woman. I have 2 dear sons that are precious.</p>
+              <p>
+                I love to write, read, play video games, Dungeons & Dragons, Magic the Gathering
+                trading card game, Final Fantasy, and Second Life.
+              </p>
+              <p>
+                I was inspired by Stephen King, Willow Winters, PC Cast and Kristen Cast, and
+                decided it is my turn.
+              </p>
+            </div>
           </div>
         </div>
       </section>
